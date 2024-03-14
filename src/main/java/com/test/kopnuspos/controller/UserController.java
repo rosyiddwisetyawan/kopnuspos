@@ -1,5 +1,7 @@
 package com.test.kopnuspos.controller;
 
+import com.test.kopnuspos.model.TblUser;
+import com.test.kopnuspos.repository.TblUserRepository;
 import com.test.kopnuspos.service.UserInfoService;
 import com.test.kopnuspos.model.JwtRequest;
 import com.test.kopnuspos.model.JwtResponse;
@@ -17,6 +19,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 public class UserController {
 
@@ -28,6 +33,9 @@ public class UserController {
 
     @Autowired
     private UserInfoService userDetailsService;
+
+    @Autowired
+    private TblUserRepository repository;
 
     @RequestMapping(value = "/token", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
@@ -49,6 +57,13 @@ public class UserController {
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public ResponseEntity<?> saveUser(@RequestBody UserRequest user) throws Exception {
+        TblUser tblUser = repository.findByUsername(user.getUsername());
+        if(tblUser!=null){
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("message", "username already exist");
+            map.put("username", tblUser.getUsername());
+            return ResponseEntity.ok(map);
+        }
         return ResponseEntity.ok(userDetailsService.save(user));
     }
 

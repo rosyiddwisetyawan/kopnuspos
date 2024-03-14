@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "eb6726aa-22da-48cd-be1e-bdc3a6fdfaed",
+		"name": "KOPNUSPOS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28076797"
+	},
+	"item": [
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "add task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb3N5aWQiLCJpYXQiOjE3MTAzOTkyODIsImV4cCI6MTcxMDQwMTA4Mn0.yBMrRkpTkd5LlfyR-uhOFDvpT4LjZhE1IdMGUkF18yo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"judul\":\"oli\",\r\n    \"deskripsi\":\"test3\",\r\n    \"waktu\":\"2024-03-18\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8023/task/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8023",
+							"path": [
+								"task",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb3N5aWQiLCJpYXQiOjE3MTAzOTkyODIsImV4cCI6MTcxMDQwMTA4Mn0.yBMrRkpTkd5LlfyR-uhOFDvpT4LjZhE1IdMGUkF18yo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8023/task/delete/37",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8023",
+							"path": [
+								"task",
+								"delete",
+								"37"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb3N5aWQiLCJpYXQiOjE3MTAzOTkyODIsImV4cCI6MTcxMDQwMTA4Mn0.yBMrRkpTkd5LlfyR-uhOFDvpT4LjZhE1IdMGUkF18yo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"judul\":\"oli\",\r\n    \"deskripsi\":\"test5\",\r\n    \"waktu\":\"2024-03-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8023/task/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8023",
+							"path": [
+								"task",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getall task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb3N5aWQiLCJpYXQiOjE3MTA0MDAyODEsImV4cCI6MTcxMDQwMjA4MX0.mHMRJyzqsYpmYThqtKdlT2sSMmpx7MWM6-hzCLVennk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8023/task/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8023",
+							"path": [
+								"task",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getbyid task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb3N5aWQiLCJpYXQiOjE3MTA0MDAyODEsImV4cCI6MTcxMDQwMjA4MX0.mHMRJyzqsYpmYThqtKdlT2sSMmpx7MWM6-hzCLVennk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8023/task/get/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8023",
+							"path": [
+								"task",
+								"get",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"rosyid\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8023/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8023",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"rosyid\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8023/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8023",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
