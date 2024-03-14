@@ -1,4 +1,4 @@
-Postman API : https://api.postman.com/collections/28076797-eb6726aa-22da-48cd-be1e-bdc3a6fdfaed?access_key=PMAT-01HRXXFA7RWV8SA1D3Z2M9YTZ1
+
 - URL API REGISTER =http://localhost:8023/register (Method POST)
   
   request body :
