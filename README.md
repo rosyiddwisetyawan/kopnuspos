@@ -46,6 +46,53 @@ Postman API : https://api.postman.com/collections/28076797-eb6726aa-22da-48cd-be
   ]
   
 - URL API GETBYID TASK =http://localhost:8023/task/get/{id} (Method GET)
+
+  response :
+  {
+    "id": 2,
+    "judul": "rosyid",
+    "deskripsi": "test2",
+    "waktu": "2024-03-13T21:25:13.494+00:00"
+  }
+  
 - URL API ADD TASK =http://localhost:8023/task/add
+
+  request body :
+  {
+    "judul":"anil",
+    "deskripsi":"test3",
+    "waktu":"2024-03-18"
+  }
+
+  response :
+  {
+    "id": 39,
+    "judul": "anil",
+    "deskripsi": "test3",
+    "waktu": "2024-03-18T00:00:00.000+00:00"
+  }
+  
 - URL API DELETE TASK =http://localhost:8023/task/delete/{id}
+
+  response :
+  {
+    "id": 37,
+    "message": "success delete task"
+  }
+  
 - URL API UPDATE TASK =http://localhost:8023/task/update/{id}
+
+  request body :
+  {
+    "judul":"oli",
+    "deskripsi":"test5",
+    "waktu":"2024-03-20"
+  }
+
+  response :
+  {
+    "id": 1,
+    "judul": "oli",
+    "deskripsi": "test5",
+    "waktu": "2024-03-20T00:00:00.000+00:00"
+  }
